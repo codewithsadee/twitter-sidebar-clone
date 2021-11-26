@@ -1,0 +1,281 @@
+:root {
+  --background: #000;
+  --brandBackground: #1d9bf020;
+  --brandColor: #d9d9d9;
+  --itemBackground: #d9d9d920;
+  --colorPrimary: #d9d9d9;
+  --colorSecondary: #6e767d;
+  --colorWhite: #fff;
+  --tweetBtnBg: #1d9bf0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+  user-select: none;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorPrimary);
+  font-size: 18px;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  background: var(--background);
+  padding: 0 3em;
+}
+
+nav.sidebar {
+  height: 100%;
+  width: 260px;
+  background: var(--background);
+  border-right: 1px solid #fff2;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 100;
+}
+
+.navbar-brand {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 8px 8px 4px 10px;
+  border-radius: 50%;
+}
+
+.navbar-brand:hover {
+  background: var(--brandBackground);
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: var(--brandColor);
+}
+
+.navbar-brand a ion-icon {
+  font-size: 30px;
+}
+
+.nav-item {
+  padding: 8px 25px 8px 10px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: var(--itemBackground);
+}
+
+.nav-item .item-icon{
+  margin-right: 15px;
+}
+
+.nav-item .item-icon ion-icon {
+  font-size: 26px;
+  --ionicon-stroke-width: 30px;
+}
+
+.nav-item .item-icon.home ion-icon {
+  font-size: 24px;
+}
+
+.nav-item .item-icon.hash {
+  padding: 0 2px;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+a.tweet-btn {
+  display: block;
+  width: 230px;
+  background: var(--tweetBtnBg);
+  color: var(--colorWhite);
+  text-align: center;
+  padding: 15px;
+  margin-top: 5px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+a.tweet-btn:hover {
+  --tweetBtnBg: #1d9bf0ee;
+}
+
+a.tweet-btn ion-icon {
+  font-size: 20px;
+  color: #fff;
+  display: none;
+}
+
+a.profile-btn {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.profile-btn:hover {
+  background: var(--itemBackground);
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img.profile-img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-info .name {
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.profile-info .username {
+  color: var(--colorSecondary);
+}
+
+.option-icon ion-icon {
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+
+/* sub items start ------------------------------------------------- */
+
+.sub-items-box {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  background: var(--background);
+  box-shadow: 0 0 10px #fff5;
+  width: 190px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+  z-index: 100;
+}
+
+.sub-items-box.active {
+  display: block;
+}
+
+.sub-item {
+  padding: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sub-item:hover {
+  background: #15181c;
+}
+
+.sub-item .item-icon {
+  margin-right: 10px;
+}
+
+.sub-item .item-icon ion-icon {
+  font-size: 18px;
+}
+
+.sub-item .item-link {
+  font-size: 14px;
+}
+
+.config {
+  padding-top: 2px;
+  margin-top: 2px;
+  border-top: 1px solid #fff2;
+}
+
+/* overlay ----------------------------------- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  display: none;
+  z-index: 10;
+}
+
+.overlay.active {
+  display: block;
+}
+
+
+/* Responsive ----------------------------------------------------------- */
+
+@media screen and (max-width: 1200px) {
+  nav.sidebar {
+    width: 75px;
+  }
+  .nav-item {
+    padding: 9px 11px;
+  }
+  .nav-item .item-icon {
+    margin-right: 0;
+  }
+  .nav-item .item-link {
+    display: none;
+  }
+  .nav-item.hash {
+    width: 48px;
+    height: 48px;
+  }
+  a.tweet-btn {
+    line-height: 0;
+    font-size: 20px;
+    width: auto;
+    padding: 12px 14px;
+  }
+  a.tweet-btn ion-icon {
+    display: inline-block;
+  }
+  a.tweet-btn .text {
+    display: none;
+  }
+  .profile-info > div {
+    display: none;
+  }
+  a.profile-btn .option-icon {
+    display: none;
+  }
+  img.profile-img {
+    margin-right: 0;
+  }
+  a.profile-btn {
+    width: 55px;
+  }
+}

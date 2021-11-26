@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home / Twitter</title>
+
+  <!-- icon -->
+  <link rel="shortcut icon" href="./images/twitter.png" type="image/png">
+
+  <!-- custom css link -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav class="sidebar">
+    <ul class="navbar">
+      <li class="navbar-brand">
+        <a href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="item-icon home">
+          <ion-icon name="home-outline"></ion-icon>
+        </a>
+        <a href="#" class="item-link">Home</a>
+      </li>
+      <li class="nav-item hash">
+        <a href="#" class="item-icon hash">
+          #
+        </a>
+        <a href="#" class="item-link">Explore</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="item-icon">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </a>
+        <a href="#" class="item-link">Notification</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="item-icon">
+          <ion-icon name="mail-outline"></ion-icon>
+        </a>
+        <a href="#" class="item-link">Messages</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="item-icon">
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </a>
+        <a href="#" class="item-link">Bookmarks</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="item-icon">
+          <ion-icon name="reader-outline"></ion-icon>
+        </a>
+        <a href="#" class="item-link">Lists</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="item-icon">
+          <ion-icon name="person-outline"></ion-icon>
+        </a>
+        <a href="#" class="item-link">Profile</a>
+      </li>
+      <li class="nav-item" id="moreBtn">
+        <a href="#" class="item-icon">
+          <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+        </a>
+        <a href="#" class="item-link">More</a>
+      </li>
+      <a href="#" class="tweet-btn"><ion-icon name="pencil"></ion-icon> <div class="text">Tweet</div></a>
+
+
+      <!-- sub menu start ----------------------------------------------------------------------------------- -->
+      <div class="sub-items-box">
+        <ul>
+          <li class="sub-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Topic</a>
+          </li>
+          <li class="sub-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="flash-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Moments</a>
+          </li>
+          <li class="sub-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="newspaper-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Newsletters</a>
+          </li>
+          <li class="sub-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="megaphone-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Twitter Ads</a>
+          </li>
+          <li class="sub-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="stats-chart-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Analytics</a>
+          </li>
+          <li class="sub-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="film-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Media Studio</a>
+          </li>
+        </ul>
+        <ul class="config">
+          <li class="sub-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Settings and privacy</a>
+          </li>
+          <li class="sub-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="help-circle-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Help Center</a>
+          </li>
+          <li class="sub-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="color-palette-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Display</a>
+          </li>
+          <li class="sub-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="accessibility-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Keyboard shortcuts</a>
+          </li>
+        </ul>
+      </div>
+      <!-- ------------------------------------------------------------------------------------------------- -->
+
+    </ul>
+
+    <a href="#" class="profile-btn">
+      <div class="profile-info">
+        <img src="./images/Ultra HDr1.jpg" alt="" class="profile-img" width="35" height="35">
+        <div>
+          <p class="name">Sadee</p>
+          <p class="username">@codewithsadee</p>
+        </div>
+      </div>
+      <div class="option-icon">
+        <ion-icon name="ellipsis-horizontal"></ion-icon>
+      </div>
+    </a>
+  </nav>
+
+  <!-- overlay for sub item box ------------------------------------------------------------------------------- -->
+  <div class="overlay"></div>
+  <!-- ------------------------------------------------------------------------------------------------- -->
+
+
+  <!-- custom script -->
+  <script>
+    const moreBtn = document.querySelector('#moreBtn');
+    const subItemsBox = document.querySelector('.sub-items-box');
+    const overlay = document.querySelector('.overlay')
+
+    moreBtn.addEventListener('click', function () {
+      subItemsBox.classList.add('active');
+      overlay.classList.add('active');
+    });
+
+    overlay.addEventListener('click', function () {
+      subItemsBox.classList.remove('active');
+      overlay.classList.remove('active');
+    })
+
+  </script>
+
+  <!-- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
